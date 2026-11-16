@@ -4,131 +4,165 @@ window.PHOTOS = [
     "thumb": "images/gallery/little-tahoma.thumb.jpg",
     "src": "images/gallery/little-tahoma.large.jpg",
     "title": "Little Tahoma",
-    "caption": ""
+    "caption": "",
+    "w": 2560,
+    "h": 1696
   },
   {
-    "thumb": "images/gallery/bison-look-away.thumb.jpg",
-    "src": "images/gallery/bison-look-away.large.jpg",
-    "title": "Bison Look Away",
-    "caption": ""
+    "thumb": "images/gallery/arches.thumb.jpg",
+    "src": "images/gallery/arches.large.jpg",
+    "title": "Arches",
+    "caption": "",
+    "w": 2560,
+    "h": 1694
+  },
+  {
+    "thumb": "images/gallery/bison.thumb.jpg",
+    "src": "images/gallery/bison.large.jpg",
+    "title": "Bison",
+    "caption": "",
+    "w": 2048,
+    "h": 2560
   },
   {
     "thumb": "images/gallery/bond-cliff.thumb.jpg",
     "src": "images/gallery/bond-cliff.large.jpg",
     "title": "Bond Cliff",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/colorado-prairie-dog.thumb.jpg",
-    "src": "images/gallery/colorado-prairie-dog.large.jpg",
-    "title": "Colorado Prairie Dog",
-    "caption": ""
+    "caption": "",
+    "w": 2560,
+    "h": 1707
   },
   {
     "thumb": "images/gallery/fuego-sunset.thumb.jpg",
     "src": "images/gallery/fuego-sunset.large.jpg",
     "title": "Fuego Sunset",
-    "caption": ""
+    "caption": "",
+    "w": 2560,
+    "h": 1675
   },
   {
     "thumb": "images/gallery/gothic-valley.thumb.jpg",
     "src": "images/gallery/gothic-valley.large.jpg",
     "title": "Gothic Valley",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/ice-climb-2.thumb.jpg",
-    "src": "images/gallery/ice-climb-2.large.jpg",
-    "title": "Ice Climb 2",
-    "caption": ""
+    "caption": "",
+    "w": 2560,
+    "h": 1707
   },
   {
     "thumb": "images/gallery/ice-climb.thumb.jpg",
     "src": "images/gallery/ice-climb.large.jpg",
     "title": "Ice Climb",
-    "caption": ""
+    "caption": "",
+    "w": 1492,
+    "h": 1865
   },
   {
-    "thumb": "images/gallery/kangamangus.thumb.jpg",
-    "src": "images/gallery/kangamangus.large.jpg",
-    "title": "Kangamangus",
-    "caption": ""
+    "thumb": "images/gallery/ice-climbers.thumb.jpg",
+    "src": "images/gallery/ice-climbers.large.jpg",
+    "title": "Ice Climbers",
+    "caption": "",
+    "w": 2048,
+    "h": 2560
+  },
+  {
+    "thumb": "images/gallery/kancamagus.thumb.jpg",
+    "src": "images/gallery/kancamagus.large.jpg",
+    "title": "Kancamagus",
+    "caption": "",
+    "w": 2560,
+    "h": 1707
   },
   {
     "thumb": "images/gallery/loveland-pass.thumb.jpg",
     "src": "images/gallery/loveland-pass.large.jpg",
     "title": "Loveland Pass",
-    "caption": ""
+    "caption": "",
+    "w": 2560,
+    "h": 1696
   },
   {
     "thumb": "images/gallery/mack-meadows.thumb.jpg",
     "src": "images/gallery/mack-meadows.large.jpg",
     "title": "Mack Meadows",
-    "caption": ""
+    "caption": "",
+    "w": 2560,
+    "h": 1696
   },
   {
     "thumb": "images/gallery/moat-goat-climber.thumb.jpg",
     "src": "images/gallery/moat-goat-climber.large.jpg",
     "title": "Moat Goat Climber",
-    "caption": ""
+    "caption": "",
+    "w": 2560,
+    "h": 1920
   },
   {
     "thumb": "images/gallery/moose.thumb.jpg",
     "src": "images/gallery/moose.large.jpg",
     "title": "Moose",
-    "caption": ""
+    "caption": "",
+    "w": 2311,
+    "h": 1541
   },
   {
     "thumb": "images/gallery/mormon-row-jackson-hole.thumb.jpg",
     "src": "images/gallery/mormon-row-jackson-hole.large.jpg",
     "title": "Mormon Row, Jackson Hole",
-    "caption": ""
+    "caption": "",
+    "w": 2560,
+    "h": 1707
+  },
+  {
+    "thumb": "images/gallery/prairie-dog.thumb.jpg",
+    "src": "images/gallery/prairie-dog.large.jpg",
+    "title": "Prairie Dog",
+    "caption": "",
+    "w": 2560,
+    "h": 1707
   },
   {
     "thumb": "images/gallery/silver-creek.thumb.jpg",
     "src": "images/gallery/silver-creek.large.jpg",
     "title": "Silver Creek",
-    "caption": ""
+    "caption": "",
+    "w": 2560,
+    "h": 1696
   },
   {
     "thumb": "images/gallery/sunflowers.thumb.jpg",
     "src": "images/gallery/sunflowers.large.jpg",
     "title": "Sunflowers",
-    "caption": ""
+    "caption": "",
+    "w": 2560,
+    "h": 1707
   },
   {
-    "thumb": "images/gallery/tuckerman-s.thumb.jpg",
-    "src": "images/gallery/tuckerman-s.large.jpg",
-    "title": "Tuckerman's",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/utah-2.thumb.jpg",
-    "src": "images/gallery/utah-2.large.jpg",
-    "title": "Utah 2",
-    "caption": ""
+    "thumb": "images/gallery/tuckerman-ravine.thumb.jpg",
+    "src": "images/gallery/tuckerman-ravine.large.jpg",
+    "title": "Tuckerman Ravine",
+    "caption": "",
+    "w": 2560,
+    "h": 1707
   },
   {
     "thumb": "images/gallery/volcan-de-fuego.thumb.jpg",
     "src": "images/gallery/volcan-de-fuego.large.jpg",
     "title": "Volcan de Fuego",
-    "caption": ""
+    "caption": "",
+    "w": 2048,
+    "h": 2560
   },
   {
     "thumb": "images/gallery/yellowstone-moon.thumb.jpg",
     "src": "images/gallery/yellowstone-moon.large.jpg",
     "title": "Yellowstone Moon",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/yellowstone.thumb.jpg",
-    "src": "images/gallery/yellowstone.large.jpg",
-    "title": "Yellowstone",
-    "caption": ""
+    "caption": "",
+    "w": 2048,
+    "h": 2560
   }
 ];
 window.SITE = {
   "portrait": "images/about/portrait.jpg",
   "splash": "images/gallery/mack-meadows.large.jpg",
-  "count": 21
+  "count": 20
 };

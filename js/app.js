@@ -36,6 +36,7 @@
     d.setAttribute("role", "button");
     d.setAttribute("tabindex", "0");
     d.setAttribute("aria-label", p.title || "Photograph " + (i + 1));
+    d.style.setProperty("--ar", (p.w && p.h ? p.w / p.h : 1.5).toFixed(4));
     var img = document.createElement("img");
     img.src = p.thumb;
     img.alt = p.title || "";
@@ -43,6 +44,14 @@
     d.appendChild(img);
     frag.appendChild(d);
   });
+  var fill = document.createElement("div");
+  fill.className = "thumbs-fill";
+  frag.appendChild(fill);
+  var end = document.createElement("a");
+  end.className = "thumbs-end";
+  end.href = "#about";
+  end.innerHTML = "<span>About &amp; Contact</span><span class=\"chev\"></span>";
+  frag.appendChild(end);
   thumbs.appendChild(frag);
   var thumbEls = thumbs.querySelectorAll(".thumb");
 

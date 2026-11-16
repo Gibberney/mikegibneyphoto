@@ -15,6 +15,8 @@ What it does
       <slug>.large.jpg   big version for the viewer + fullscreen (long edge 2560px)
 - Pulls your headshot out for the About section (not shown in the grid).
 - Skips anything listed in EXCLUDE (e.g. screenshots).
+- Makes images/og.jpg, the link-preview image, from the splash photo.
+- Deletes web copies of photos you've removed from photography/.
 - Writes galleries/manifest.js  ->  window.PHOTOS + window.SITE
 
 Controlling order & captions
@@ -34,6 +36,7 @@ OUT_DIR = os.path.join(ROOT, "images", "gallery")
 ABOUT_DIR = os.path.join(ROOT, "images", "about")
 MANIFEST = os.path.join(ROOT, "galleries", "manifest.js")
 CAPTIONS = os.path.join(ROOT, "tools", "captions.json")
+OG_IMAGE = os.path.join("images", "og.jpg")
 
 THUMB_EDGE = 700
 LARGE_EDGE = 2560
@@ -73,6 +76,13 @@ def save_resized(img, path, edge, q):
     if scale < 1.0:
         im = im.resize((round(w * scale), round(h * scale)), Image.LANCZOS)
     im.save(path, "JPEG", quality=q, optimize=True, progressive=True)
+    return im.size
+
+
+def save_og(img, path, size=(1200, 630)):
+    """Link-preview image (what shows when the site is shared in a text or post)."""
+    im = ImageOps.fit(ImageOps.exif_transpose(img).convert("RGB"), size, Image.LANCZOS)
+    im.save(path, "JPEG", quality=85, optimize=True, progressive=True)
 
 
 def main():
@@ -114,18 +124,21 @@ def main():
         thumb_rel = f"images/gallery/{slug}.thumb.jpg"
         large_rel = f"images/gallery/{slug}.large.jpg"
         save_resized(img, os.path.join(ROOT, thumb_rel), THUMB_EDGE, Q_THUMB)
-        save_resized(img, os.path.join(ROOT, large_rel), LARGE_EDGE, Q_LARGE)
+        w, h = save_resized(img, os.path.join(ROOT, large_rel), LARGE_EDGE, Q_LARGE)
 
         if HERO_MATCH in low:
             hero_index = len(photos)
         if SPLASH_MATCH in low and not splash:
             splash = large_rel
+            save_og(img, os.path.join(ROOT, OG_IMAGE))
 
         photos.append({
             "thumb": thumb_rel,
             "src": large_rel,
             "title": os.path.splitext(fname)[0],
             "caption": captions.get(fname, ""),
+            "w": w,
+            "h": h,
         })
         print("  +", fname)
 
@@ -136,6 +149,13 @@ def main():
     if not splash and photos:
         splash = photos[0]["src"]
     site = {"portrait": portrait, "splash": splash, "count": len(photos)}
+
+    # Remove web copies of photos that are no longer in photography/
+    keep = {os.path.basename(p[k]) for p in photos for k in ("thumb", "src")}
+    for f in os.listdir(OUT_DIR):
+        if f.endswith((".thumb.jpg", ".large.jpg")) and f not in keep:
+            os.remove(os.path.join(OUT_DIR, f))
+            print("  - removed old", f)
 
     os.makedirs(os.path.dirname(MANIFEST), exist_ok=True)
     with open(MANIFEST, "w") as f:
