@@ -1,0 +1,13 @@
+node_modules/
+.DS_Store
+*.log
+.env
+Thumbs.db
+
+# Originals stay on this computer only; the site uses the optimized copies in images/
+photography/
+# Private notes / old hosting config — not part of the public site
+PLAN-the-trail.md
+render.yaml
+.idea/
+__pycache__/

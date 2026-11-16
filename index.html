@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mike Gibney Photography</title>
+  <meta name="description" content="Landscape and adventure photography by Mike Gibney — a New Jersey based photographer. Prints available." />
+  <meta property="og:title" content="Mike Gibney Photography" />
+  <meta property="og:description" content="Landscape & adventure photography. New Jersey based." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <a class="wordmark" href="#top">
+      <span class="name">Mike Gibney</span>
+      <span class="sub">Photography</span>
+    </a>
+    <nav class="topnav">
+      <a href="#home">Home</a>
+      <a href="#top">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- SPLASH -->
+  <section id="home" class="splash">
+    <img class="splash-img" id="splash-img" alt="" />
+    <div class="splash-overlay">
+      <h1 class="splash-title">Mike Gibney</h1>
+      <p class="splash-sub">Landscape &amp; Adventure Photography</p>
+    </div>
+    <a href="#top" class="splash-scroll" aria-label="Scroll to gallery">
+      <span>Enter the gallery</span><span class="chev"></span>
+    </a>
+  </section>
+
+  <!-- GALLERY -->
+  <main id="top" class="gallery">
+    <!-- Left: viewer -->
+    <section class="viewer" aria-label="Photo viewer">
+      <img class="viewer-img" id="viewer-img" alt="" />
+      <div class="viewer-meta">
+        <div class="label">
+          <div class="title" id="viewer-title"></div>
+          <div class="caption" id="viewer-caption"></div>
+        </div>
+        <button class="expand-btn" id="expand-btn" aria-label="Expand to fullscreen" title="Expand (full screen)">
+          <svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+        </button>
+      </div>
+      <div class="scroll-hint"><span>About &amp; Contact</span><span class="chev"></span></div>
+    </section>
+
+    <!-- Right: thumbnail grid -->
+    <section class="thumbs" id="thumbs" aria-label="All photographs"></section>
+  </main>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <span class="eyebrow">About</span>
+      <div class="about-grid">
+        <img class="about-portrait" id="about-portrait" src="images/about/portrait.jpg" alt="Mike Gibney" />
+        <div class="about-copy">
+          <h2>Chasing light a little further than planned.</h2>
+          <p>Northern New Jersey, less than an hour from New York City, isn't a stereotypical opening scene to a story about falling in love with the great outdoors. Maybe it was the lack of towering mountains or rolling valleys that became the foundation of my obsession with exploring places I had only heard about. Who's to say? I like to think so.</p>
+          <p>When given the opportunity to explore somewhere new, there's nothing I enjoy more than sharing that experience with friends and family. Sometimes that means sharing a tattered tent with front row seats to an erupting volcano or donning headlamps for a late night hike after a summit sunset. Most of the time though, it means sharing these places and experiences by telling stories and showing photos.</p>
+          <p>Nearly every one of my favorite photos are the end result of unplanned events. They are the answers to questions like…</p>
+          <p class="q">"How much further can we get the truck down this trail?"<br />"Do you think the summit is above these rain clouds?"<br />"What happens if it erupts while we're up there?"</p>
+          <p>And I think those moments of serendipity or just dumb luck make each one of these photos unique and also so similar in many ways. There was only ever a loose plan that wasn't truly followed, no control over what might happen next, and somehow everything came together in a fleeting moment, preserved in a photograph.</p>
+          <p>I hope these photos encourage you to explore a little further than originally planned, take the trail not so worn by others, and bring supplies to spend the night because the adventure might just be so great you won't want it to end.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <span class="eyebrow">Contact</span>
+      <div class="contact-grid">
+        <div class="contact-copy">
+          <h2>Prints &amp; inquiries.</h2>
+          <p>Like something you see? Most images are available as fine-art prints, made to order — just tell me which photograph and how big you're thinking, and I'll follow up with options and pricing. Same goes for licensing, commissions, or just saying hello.</p>
+          <div class="detail"><span>Email</span><a href="mailto:michaeldgibney@gmail.com">michaeldgibney@gmail.com</a></div>
+          <div class="detail"><span>Phone</span><a href="tel:+19732223870">973-222-3870</a></div>
+          <div class="detail"><span>Based in</span><strong>Northern New Jersey</strong></div>
+        </div>
+
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="photo">Photograph / interest (optional)</label>
+            <input id="photo" name="photo" type="text" placeholder="e.g. Little Tahoma — 16×24 print" />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me what you have in mind…"></textarea>
+          </div>
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <button class="btn" type="submit" id="submit-btn">Send message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Michael Gibney</span>
+    <span>Northern New Jersey · <a href="mailto:michaeldgibney@gmail.com">michaeldgibney@gmail.com</a></span>
+  </footer>
+
+  <!-- FULLSCREEN -->
+  <div class="fullscreen" id="fullscreen" aria-hidden="true">
+    <button class="fs-close" id="fs-close" aria-label="Close">&times;</button>
+    <button class="fs-nav fs-prev" id="fs-prev" aria-label="Previous">&#8249;</button>
+    <img id="fs-img" alt="" />
+    <button class="fs-nav fs-next" id="fs-next" aria-label="Next">&#8250;</button>
+  </div>
+
+  <script src="galleries/manifest.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/contact.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
