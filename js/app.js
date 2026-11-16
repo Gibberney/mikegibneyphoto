@@ -44,9 +44,6 @@
     d.appendChild(img);
     frag.appendChild(d);
   });
-  var fill = document.createElement("div");
-  fill.className = "thumbs-fill";
-  frag.appendChild(fill);
   var end = document.createElement("a");
   end.className = "thumbs-end";
   end.href = "#about";
@@ -54,6 +51,38 @@
   frag.appendChild(end);
   thumbs.appendChild(frag);
   var thumbEls = thumbs.querySelectorAll(".thumb");
+
+  // ----- Pack thumbnails into full-width rows (no lone photo on the last row)
+  var TARGET_H = 88, GAP = 8;
+  function packThumbs() {
+    var els = Array.prototype.slice.call(thumbEls);
+    if (window.matchMedia("(max-width: 900px)").matches) {
+      els.forEach(function (el) { el.style.width = ""; el.style.height = ""; });
+      return;
+    }
+    var W = thumbs.clientWidth - 2 * GAP;
+    var ar = function (el) { return parseFloat(el.style.getPropertyValue("--ar")) || 1.5; };
+    var rows = [], cur = [], sum = 0;
+    els.forEach(function (el) {
+      cur.push(el); sum += ar(el);
+      if (sum * TARGET_H + (cur.length - 1) * GAP >= W) { rows.push(cur); cur = []; sum = 0; }
+    });
+    if (cur.length) {
+      if (cur.length === 1 && rows.length) rows[rows.length - 1].push(cur[0]);
+      else rows.push(cur);
+    }
+    rows.forEach(function (row) {
+      var s = row.reduce(function (a, el) { return a + ar(el); }, 0);
+      var h = (W - (row.length - 1) * GAP) / s;
+      row.forEach(function (el) {
+        el.style.height = h.toFixed(2) + "px";
+        el.style.width = (Math.floor(ar(el) * h * 100) / 100 - 0.01).toFixed(2) + "px";
+      });
+    });
+  }
+  packThumbs();
+  var packTimer;
+  window.addEventListener("resize", function () { clearTimeout(packTimer); packTimer = setTimeout(packThumbs, 120); });
 
   // ----- Viewer ----------------------------------------------------------
   function select(i, scrollIntoView) {
