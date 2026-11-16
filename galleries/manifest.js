@@ -7,33 +7,9 @@ window.PHOTOS = [
     "caption": ""
   },
   {
-    "thumb": "images/gallery/bison-look-at.thumb.jpg",
-    "src": "images/gallery/bison-look-at.large.jpg",
-    "title": "Bison Look At",
-    "caption": ""
-  },
-  {
     "thumb": "images/gallery/bison-look-away.thumb.jpg",
     "src": "images/gallery/bison-look-away.large.jpg",
     "title": "Bison Look Away",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/bison-morning.thumb.jpg",
-    "src": "images/gallery/bison-morning.large.jpg",
-    "title": "Bison Morning",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/bison-wet.thumb.jpg",
-    "src": "images/gallery/bison-wet.large.jpg",
-    "title": "Bison Wet",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/bison.thumb.jpg",
-    "src": "images/gallery/bison.large.jpg",
-    "title": "Bison",
     "caption": ""
   },
   {
@@ -49,21 +25,9 @@ window.PHOTOS = [
     "caption": ""
   },
   {
-    "thumb": "images/gallery/dunes.thumb.jpg",
-    "src": "images/gallery/dunes.large.jpg",
-    "title": "Dunes",
-    "caption": ""
-  },
-  {
     "thumb": "images/gallery/fuego-sunset.thumb.jpg",
     "src": "images/gallery/fuego-sunset.large.jpg",
     "title": "Fuego Sunset",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/goat-snack.thumb.jpg",
-    "src": "images/gallery/goat-snack.large.jpg",
-    "title": "Goat Snack",
     "caption": ""
   },
   {
@@ -88,12 +52,6 @@ window.PHOTOS = [
     "thumb": "images/gallery/kangamangus.thumb.jpg",
     "src": "images/gallery/kangamangus.large.jpg",
     "title": "Kangamangus",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/leadville.thumb.jpg",
-    "src": "images/gallery/leadville.large.jpg",
-    "title": "Leadville",
     "caption": ""
   },
   {
@@ -127,57 +85,15 @@ window.PHOTOS = [
     "caption": ""
   },
   {
-    "thumb": "images/gallery/prairie-dog.thumb.jpg",
-    "src": "images/gallery/prairie-dog.large.jpg",
-    "title": "Prairie Dog",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/shannon-on-black.thumb.jpg",
-    "src": "images/gallery/shannon-on-black.large.jpg",
-    "title": "Shannon on Black",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/shannon.thumb.jpg",
-    "src": "images/gallery/shannon.large.jpg",
-    "title": "Shannon",
-    "caption": ""
-  },
-  {
     "thumb": "images/gallery/silver-creek.thumb.jpg",
     "src": "images/gallery/silver-creek.large.jpg",
     "title": "Silver Creek",
     "caption": ""
   },
   {
-    "thumb": "images/gallery/sunflower-black.thumb.jpg",
-    "src": "images/gallery/sunflower-black.large.jpg",
-    "title": "Sunflower Black",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/sunflower-pot.thumb.jpg",
-    "src": "images/gallery/sunflower-pot.large.jpg",
-    "title": "Sunflower Pot",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/sunflower-white.thumb.jpg",
-    "src": "images/gallery/sunflower-white.large.jpg",
-    "title": "Sunflower White",
-    "caption": ""
-  },
-  {
     "thumb": "images/gallery/sunflowers.thumb.jpg",
     "src": "images/gallery/sunflowers.large.jpg",
     "title": "Sunflowers",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/swan-mountain.thumb.jpg",
-    "src": "images/gallery/swan-mountain.large.jpg",
-    "title": "Swan Mountain",
     "caption": ""
   },
   {
@@ -190,24 +106,6 @@ window.PHOTOS = [
     "thumb": "images/gallery/utah-2.thumb.jpg",
     "src": "images/gallery/utah-2.large.jpg",
     "title": "Utah 2",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/utah.thumb.jpg",
-    "src": "images/gallery/utah.large.jpg",
-    "title": "Utah",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/via-ferata.thumb.jpg",
-    "src": "images/gallery/via-ferata.large.jpg",
-    "title": "Via Ferata",
-    "caption": ""
-  },
-  {
-    "thumb": "images/gallery/volcan-de-agua.thumb.jpg",
-    "src": "images/gallery/volcan-de-agua.large.jpg",
-    "title": "Volcan de Agua",
     "caption": ""
   },
   {
@@ -232,5 +130,5 @@ window.PHOTOS = [
 window.SITE = {
   "portrait": "images/about/portrait.jpg",
   "splash": "images/gallery/mack-meadows.large.jpg",
-  "count": 38
+  "count": 21
 };
